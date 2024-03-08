@@ -1,0 +1,112 @@
+/* Estilos para el cuerpo de la página */
+body {
+    background-image: url('img/imgacaurela.png'); 
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Color de fondo */
+    color: #333; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed; /* Fijar la imagen de fondo */
+    background-position: center; /* Centrar la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen de fondo al contenedor */
+    transition: background-image 0.5s ease; /* Transición suave para el cambio de imagen de fondo */
+}
+
+/* Estilos para el encabezado */
+.container-fluid {
+    background-color: #347c74;
+}
+header {
+    background-color: #347c74; /* Color de fondo del encabezado */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilos para los enlaces del menú */
+.nav-link {
+    color: #2e1205; /* Color del texto de los enlaces */
+    transition: color 0.3s; /* Transición suave de color */
+}
+
+.nav-link:hover {
+    color: #a1d7d1; /* Color del texto al pasar el ratón */
+}
+
+/* Estilos para la sección de bienvenida */
+h1 {
+    color:  #7c7c7c; /* Color del título */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para el párrafo de presentación */
+h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para la imagen de perfil */
+.img-fluid {
+    border: 3px solid #000000; /* Borde alrededor de la imagen */
+    display: block; /* Asegura que la imagen no tenga margen inferior */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #347c74; /* Color de fondo del pie de página */
+    color: #666; /* Color del texto del pie de página */
+    font-size: 0.9rem;
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Estilos para la sección del mapa */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura del 100% del viewport */
+    /* Color de fondo */
+}
+
+/* Estilos para el menú de navegación */
+.nav-pills .nav-item {
+    background-color: #347c74; /* Color de fondo de los elementos del menú */
+    margin: 5px 0; /* Modificado el margen vertical y eliminado el margen horizontal */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+.nav-pills .nav-item a {
+    color: #333; /* Color del texto de los elementos del menú */
+}
+/* Estilos para el carrusel */
+.carousel {
+    max-width: 600px; /* Ajusta el ancho máximo del carrusel según sea necesario */
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+    
+}
+
+.carousel-item img {
+    height: 300px; /* Ajusta la altura de las imágenes del carrusel según sea necesario */
+    object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+}
+.carousel-control-next-icon {
+    background-color: #a1d7d1;
+}
+
+.carousel-control-prev-icon {
+    background-color: #a1d7d1;
+}
+.container.text-center.fin{
+    background-color:#347c74;
+}
+/*pagina 2 */
+body.sobre-mi {
+    background-image: url('img/hojacuaderno.png'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centrar la imagen */
+    background-attachment: fixed; /* Fijar la imagen de fondo mientras se desplaza el contenido */
+}
+.breadcrumb-link {
+    color:#a1d7d1
+}
