@@ -10,7 +10,7 @@
         /* Estilos personalizados aquí */
     </style>
 </head>
-<body  class="sobre-mi">
+<body >
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -39,8 +39,81 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Inicio</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Contacto</li>
-                        </ol>
+                        
                     </nav>
+                    <h1>Contacto</h1>
+                    <form id="contactForm" action="https://formspree.io/t.eujenin@gmail.com" method="POST">
+                        <label for="nombre">Nombre:</label><br>
+                        <input type="text" id="nombre" name="nombre" required><br>
+                        <span id="nombreError" class="error"></span>
+
+                        <label for="email">Correo Electrónico:</label><br>
+                        <input type="email" id="email" name="_replyto" required><br>
+                        <span id="emailError" class="error"></span>
+
+                        <label for="telefono">Teléfono:</label><br>
+                        <input type="tel" id="telefono" name="telefono"><br>
+
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br>
+                        <span id="mensajeError" class="error"></span>
+
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="mt-5 text-center"> 
+        <h2>Datos de Contacto</h2>
+        <p>Teléfono: +56 9 67778142</p>
+        <p>Correo Electrónico: t.eujenin@duocuc.cl</p>
+        <p>Dirección: Fabian Oyanedel 5531, Huechuraba </p>
+    </div>
+
+    <div class="map-container mt-5">
+        <div id="map" style="width: 800px; height: 600px;"></div>
+    </div>
+
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            const nombre = document.getElementById("nombre").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const telefono = document.getElementById("telefono").value.trim();
+            const mensaje = document.getElementById("mensaje").value.trim();
+            const nombreError = document.getElementById("nombreError");
+            const emailError = document.getElementById("emailError");
+            const mensajeError = document.getElementById("mensajeError");
+
+            nombreError.textContent = "";
+            emailError.textContent = "";
+            mensajeError.textContent = "";
+
+            if (nombre === "") {
+                nombreError.textContent = "Por favor, ingresa tu nombre";
+                event.preventDefault();
+            }
+
+            if (email === "") {
+                emailError.textContent = "Por favor, ingresa tu correo electrónico";
+                event.preventDefault();
+            }
+
+            // Validación de correo electrónico con expresión regular
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailError.textContent = "Por favor, ingresa un correo electrónico válido";
+                event.preventDefault();
+            }
+
+            if (mensaje === "") {
+                mensajeError.textContent = "Por favor, ingresa tu mensaje";
+                event.preventDefault();
+            }
+        });
+    </script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOsmGrYpO3XE_AAmsY0AiYvWYALoLvrSk&callback=initMap&libraries=maps,marker&v=beta"></script>
+    <script src="mapa.js"></script>
+</body>
+</html>
